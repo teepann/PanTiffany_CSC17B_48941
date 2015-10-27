@@ -1,0 +1,12 @@
+INPUT(
+./release\main.o
+./release\window.o
+./release\pacman.o
+./release\map.o
+./release\ball.o
+./release\ghost.o
+./release\powerball.o
+./release\moc_window.o
+./release\qrc_images.o
+./release\qrc_sounds.o
+);
