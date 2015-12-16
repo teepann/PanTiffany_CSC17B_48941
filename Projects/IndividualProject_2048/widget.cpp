@@ -5,14 +5,26 @@
 #include <qhboxlayout>
 #include <iostream>
 #include <QDataStream>
+#include <QFile>
+#include <QTextStream>
+#include <QMenuBar>
+
 using namespace std;
 
 Widget::Widget(QWidget *parent) :QWidget(parent),
     ui(new Ui::Widget)
 {
     ui->setupUi(this);
+    //ui->pushButton->setFixedWidth(10);
     score = 0;
     createboard();
+
+    /*QVBoxLayout vbox;
+    this->setLayout(vbox);
+    QMenuBar menuBar;
+    vbox.addWidget(menuBar);
+    menuBar.addMenu('File');
+    menuBar.addMenu('Edit');*/
 }
 
 Widget::~Widget()
@@ -191,6 +203,16 @@ void Widget::endGame(int ch)
             word->setText("Gameover");
         endgame->setLayout(layout);
         endgame->show();
+
+        QFile file("C:\\Users\\Tiffany\\Desktop\\17b\\Projects\\IndividualProject_2048\\info.txt");
+        if (!file.open(QIODevice::WriteOnly))
+        {
+            cerr << "Cannot open file for writing: "
+                 << qPrintable(file.errorString()) << endl;
+            return;
+        }
+        QTextStream out(&file);
+        out << "name" << "score: " << endl;
 
 }
 
