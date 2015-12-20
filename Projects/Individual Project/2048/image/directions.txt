@@ -1,0 +1,5 @@
+The game starts with 1 or 2 randomly placed numbers in a 4x4 grid (16 cells).
+Use the controls to move the cells. 
+2 adjacent cells of the same number will merge and add up.
+New 2s and 4s will appear randomly on an empty cell with each move you make.
+Your objective is to make 2048 in a cell without getting stuck!

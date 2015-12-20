@@ -4,7 +4,9 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui sql \
+        multimedia
+QT       += network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -16,18 +18,23 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     mainscene.cpp \
     uicontroller.cpp \
-    startmenu.cpp \
-    endmenu.cpp
+    gamelevel.cpp \
+    difficultydialog.cpp \
+    godialog.cpp \
+    fbhelper.cpp
 
 HEADERS  += mainwindow.h \
     mainscene.h \
     uicontroller.h \
-    startmenu.h \
-    endmenu.h
+    gamelevel.h \
+    difficultydialog.h \
+    godialog.h \
+    fbhelper.h
 
 FORMS    += mainwindow.ui \
-    startmenu.ui \
-    endmenu.ui
+    difficultydialog.ui \
+    godialog.ui
 
 RESOURCES += \
-    images.qrc
+    images.qrc \
+    soundtracks.qrc

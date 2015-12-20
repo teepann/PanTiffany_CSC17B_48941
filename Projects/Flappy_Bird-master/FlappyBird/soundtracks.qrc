@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>SoundTracks/BGround.mp3</file>
+        <file>SoundTracks/EndGame.mp3</file>
+        <file>SoundTracks/Score.mp3</file>
+    </qresource>
+</RCC>
